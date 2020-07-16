@@ -33,9 +33,11 @@ namespace TotvsDevXamarinForms
         {
             Crashes.GenerateTestCrash();
 
+
+
             //try
             //{
-               
+
             //}
             //catch (Exception exception)
             //{
@@ -48,7 +50,7 @@ namespace TotvsDevXamarinForms
             //}
             //catch (Exception exception)
             //{
-            //                var properties = new Dictionary<string, string> {
+            //    var properties = new Dictionary<string, string> {
             //    { "Category", "Music" },
             //    { "Wifi", "On" }
             //  };
