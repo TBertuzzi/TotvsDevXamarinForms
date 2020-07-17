@@ -13,8 +13,8 @@ namespace TotvsDevXamarinForms
         {
             InitializeComponent();
 
-            AppCenter.Start("android=88792496-a93c-46f0-80cb-03dda2ef1e1c;" +
-                  "ios=8aa53e88-a408-4ca7-85b4-6c5f8580f8b2",
+            AppCenter.Start("android=SuaConfigAndroid;" +
+                  "ios=suaConfigiOS",
                   typeof(Analytics), typeof(Crashes));
 
             MainPage = new MainPage();

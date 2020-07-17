@@ -23,7 +23,7 @@ namespace TotvsDevXamarinForms
         private void btnAnalytics_Clicked(object sender, EventArgs e)
         {
             var properties = new Dictionary<string, string> {
-                { "Category", "Music" }
+                { "Canal Net", "TOTVS" }
             };
 
             Analytics.TrackEvent("Pagina acessada",properties);
@@ -32,30 +32,38 @@ namespace TotvsDevXamarinForms
         private void btnCrash_Clicked(object sender, EventArgs e)
         {
             Crashes.GenerateTestCrash();
+        }
 
+        private void btnCrashException_Clicked(object sender, EventArgs e)
+        {
+            var crash = "Totvs";
 
+            try
+            {
+                int numero = Convert.ToInt32(crash);
+            }
+            catch (Exception exception)
+            {
+                Crashes.TrackError(exception);
+            }
 
-            //try
-            //{
+        }
 
-            //}
-            //catch (Exception exception)
-            //{
-            //    Crashes.TrackError(exception);
-            //}
-
-            //try
-            //{
-            //    // your code here.
-            //}
-            //catch (Exception exception)
-            //{
-            //    var properties = new Dictionary<string, string> {
-            //    { "Category", "Music" },
-            //    { "Wifi", "On" }
-            //  };
-            //    Crashes.TrackError(exception, properties);
-            //}
+        private void btnCrashEvent_Clicked(object sender, EventArgs e)
+        {
+            var crash = "Totvs";
+            try
+            {
+                int numero = Convert.ToInt32(crash);
+            }
+            catch (Exception exception)
+            {
+                var properties = new Dictionary<string, string> {
+                 { "Canal Net", "TOTVS" },
+                { "Conversao", "Numero" }
+              };
+                Crashes.TrackError(exception, properties);
+            }
         }
     }
 }
